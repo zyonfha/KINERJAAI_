@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KINERJAAI | Dashboard SDM</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">K</span><div><b>KINERJAAI</b><small>People Analytics</small></div></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="dashboard"><span>▦</span> Dashboard</button>
+      <button class="nav-item" data-page="employees"><span>♙</span> Data Karyawan</button>
+      <button class="nav-item" data-page="indicators"><span>◈</span> Indikator KPI</button>
+      <button class="nav-item" data-page="analytics"><span>▥</span> KPI Analytics</button>
+      <button class="nav-item" data-page="insight"><span>⌁</span> Performance Insight</button>
+      <button class="nav-item" data-page="recommendations"><span>✧</span> Rekomendasi</button>
+      <button class="nav-item" data-page="review"><span>✓</span> Tinjauan SDM</button>
+      <button class="nav-item" data-page="monitoring"><span>◷</span> Pemantauan</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="avatar">SD</div><div><b>Pengelola SDM</b><small>Mode prototipe</small></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><div class="eyebrow">HUMAN RESOURCES / ANALYTICS</div><h1 id="page-title">Dashboard</h1><p id="page-subtitle">Pantau kinerja dan pengembangan kompetensi dalam satu tempat.</p></div><div class="top-actions"><span class="demo-pill">● DATA FIKTIF</span><button class="icon-btn" id="theme-toggle" title="Ganti tema">☾</button></div></header>
+    <div class="notice"><b>ⓘ Mode prototipe:</b> data karyawan fiktif. Rekomendasi hanya bahan pertimbangan; keputusan akhir tetap pada pengelola SDM.</div>
+    <section id="app"></section>
+    <footer>KINERJAAI · Prototipe Gagasan Kreatif Pilmapres 2026 · Data disimpan sementara di browser.</footer>
+  </main>
+  <div class="toast" id="toast"></div>
+  <dialog id="indicator-dialog">
+    <form id="indicator-form" method="dialog">
+      <div class="dialog-head"><div><h2>Tambah indikator KPI</h2><p>Lengkapi informasi indikator baru.</p></div><button class="icon-btn" type="button" id="close-dialog">×</button></div>
+      <div class="form-grid">
+        <label>Kode indikator<input name="code" placeholder="KPI017" required></label>
+        <label>Nama indikator<input name="name" placeholder="Ketepatan waktu dokumen" required></label>
+        <label>Jabatan<select name="role"><option>Staf administrasi</option><option>Staf arsip</option><option>Staf data kepegawaian</option><option>Semua jabatan</option></select></label>
+        <label>Satuan<select name="unit"><option value="%">Persen (%)</option><option value="skor">Skor</option><option value="dokumen">Dokumen</option><option value="jam">Jam</option></select></label>
+        <label>Target standar<input name="target" type="number" step="any" min="0" required></label>
+        <label>Bobot (%)<input name="weight" type="number" min="1" max="100" value="10" required></label>
+        <label>Arah penilaian<select name="direction"><option value="up">Semakin tinggi semakin baik</option><option value="down">Semakin rendah semakin baik</option></select></label>
+      </div>
+      <div class="dialog-actions"><button type="button" class="btn secondary" id="cancel-dialog">Batal</button><button class="btn primary" type="submit">Simpan indikator</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
